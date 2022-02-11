@@ -1,0 +1,26 @@
+﻿{
+  "Банан": {
+    "image": "Images/PlayersImage/banana.gif",
+    "icon": "Images/PlayersImage/Icons/banana.png",
+    "hp": 300,
+    "damage": 50,
+    "armor": 150,
+    "coins": 20
+  },
+  "Пепе": {
+    "image": "Images/PlayersImage/pepe.gif",
+    "icon": "Images/PlayersImage/Icons/pepe.png",
+    "hp": 500,
+    "damage": 30,
+    "armor": 300,
+    "coins": 40
+  },
+  "Кот": {
+    "image": "Images/PlayersImage/cat.gif",
+    "icon": "Images/PlayersImage/Icons/cat.png",
+    "hp": 350,
+    "damage": 40,
+    "armor": 250,
+    "coins": 10
+  }
+}

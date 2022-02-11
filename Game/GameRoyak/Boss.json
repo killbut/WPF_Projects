@@ -1,0 +1,9 @@
+[
+  {
+    "Name": "Месиво",
+    "HP": 650,
+    "Damage": 30,
+    "Image": "Images/Enemies/Boss.png",
+    "CurrentHP": 650
+  }
+]

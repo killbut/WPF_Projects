@@ -1,0 +1,82 @@
+﻿[
+  {
+    "ID": 1,
+    "Name": "Слизень",
+    "HP": 120,
+    "Damage": 10,
+    "Image": "Images/Enemies/SlimeBlue.png",
+    "CurrentHP": 120
+  },
+  {
+    "ID": 2,
+    "Name": "Слизень",
+    "HP": 100,
+    "Damage": 15,
+    "Image": "Images/Enemies/SlimePink.png",
+    "CurrentHP": 100
+  },
+  {
+    "ID": 3,
+    "Name": "Слизень",
+    "HP": 150,
+    "Damage": 5,
+    "Image": "Images/Enemies/SlimeGreen.png",
+    "CurrentHP": 150
+  },
+  {
+    "ID": 4,
+    "Name": "Крыса",
+    "HP": 150,
+    "Damage": 25,
+    "Image": "Images/Enemies/Rat.png",
+    "CurrentHP": 150
+  },
+  {
+    "ID": 5,
+    "Name": "Скорпион",
+    "HP": 150,
+    "Damage": 15,
+    "Image": "Images/Enemies/ScorpionPink.png",
+    "CurrentHP": 150
+  },
+  {
+    "ID": 6,
+    "Name": "Скорпион",
+    "HP": 150,
+    "Damage": 10,
+    "Image": "Images/Enemies/ScorpionOrange.png",
+    "CurrentHP": 150
+  },
+  {
+    "ID": 7,
+    "Name": "Скорпион",
+    "HP": 150,
+    "Damage": 20,
+    "Image": "Images/Enemies/ScorpionYellow.png",
+    "CurrentHP": 150
+  },
+  {
+    "ID": 8,
+    "Name": "Орк",
+    "HP": 300,
+    "Damage": 20,
+    "Image": "Images/Enemies/Orc.png",
+    "CurrentHP": 300
+  },
+  {
+    "ID": 9,
+    "Name": "Змея",
+    "HP": 300,
+    "Damage": 20,
+    "Image": "Images/Enemies/SnakeViolet.png",
+    "CurrentHP": 300
+  },
+  {
+    "ID": 10,
+    "Name": "Змея",
+    "HP": 300,
+    "Damage": 25,
+    "Image": "Images/Enemies/SnakePink.png",
+    "CurrentHP": 300
+  }
+]

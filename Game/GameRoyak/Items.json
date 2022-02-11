@@ -1,0 +1,242 @@
+﻿{
+  "numberItems": 29,
+  "items": [
+    {
+      "name": "Руна воздуха",
+      "Price": 10,
+      "Icon": "Images/Items/AirRune.png",
+      "Damage": 0,
+      "Armor": 50,
+      "Hp": 0
+    },
+
+    {
+      "name": "Древняя руна",
+      "Price": 20,
+      "Icon": "Images/Items/AncientRune.png",
+      "Damage": 0,
+      "Armor": 100,
+      "Hp": 0
+    },
+
+    {
+      "name": "Кинжал убийцы",
+      "Price": 7,
+      "Icon": "Images/Items/AssassinsDagger.png",
+      "Damage": 30,
+      "Armor": 0,
+      "Hp": 0
+    },
+
+    {
+      "name": "Ожерелье с сапфиром",
+      "Price": 15,
+      "Icon": "Images/Items/BlueNecklace.png",
+      "Damage": 0,
+      "Armor": 0,
+      "Hp": 200
+    },
+
+    {
+      "name": "Книга",
+      "Price": 15,
+      "Icon": "Images/Items/Book.png",
+      "Damage": 30,
+      "Armor": 0,
+      "Hp": 50
+    },
+
+    {
+      "name": "Корона",
+      "Price": 10,
+      "Icon": "Images/Items/Crown.png",
+      "Damage": 15,
+      "Armor": 0,
+      "Hp": 50
+    },
+    {
+      "name": "Молот демона",
+      "Price": 20,
+      "Icon": "Images/Items/DemonHammer.png",
+      "Damage": 70,
+      "Armor": 0,
+      "Hp": 0
+    },
+    {
+      "name": "Руна демона",
+      "Price": 15,
+      "Icon": "Images/Items/DemonicRune.png",
+      "Damage": 0,
+      "Armor": 70,
+      "Hp": 0
+    },
+    {
+      "name": "Алмазный меч",
+      "Price": 50,
+      "Icon": "Images/Items/DiamondDagger.png",
+      "Damage": 100,
+      "Armor": 0,
+      "Hp": 0
+    },
+    {
+      "name": "Камешек",
+      "Price": 3,
+      "Icon": "Images/Items/EarthRune.png",
+      "Damage": 10,
+      "Armor": 0,
+      "Hp": 0
+    },
+    {
+      "name": "Огненное кольцо",
+      "Price": 30,
+      "Icon": "Images/Items/FireRing.png",
+      "Damage": 0,
+      "Armor": 0,
+      "Hp": 300
+    },
+    {
+      "name": "Огненный меч",
+      "Price": 45,
+      "Icon": "Images/Items/FireSword.png",
+      "Damage": 90,
+      "Armor": 0,
+      "Hp": 0
+    },
+    {
+      "name": "Золотое кольцо",
+      "Price": 10,
+      "Icon": "Images/Items/GoldRing.png",
+      "Damage": 0,
+      "Armor": 0,
+      "Hp": 150
+    },
+    {
+      "name": "Молот",
+      "Price": 10,
+      "Icon": "Images/Items/Hammer.png",
+      "Damage": 50,
+      "Armor": 0,
+      "Hp": 0
+    },
+    {
+      "name": "Подвеска с сердечком",
+      "Price": 20,
+      "Icon": "Images/Items/HeartNecklace.png",
+      "Damage": 0,
+      "Armor": 0,
+      "Hp": 250
+    },
+    {
+      "name": "Ледяной меч",
+      "Price": 5,
+      "Icon": "Images/Items/IceSword.png",
+      "Damage": 20,
+      "Armor": 0,
+      "Hp": 0
+    },
+    {
+      "name": "Дневник",
+      "Price": 20,
+      "Icon": "Images/Items/OldDiary.png",
+      "Damage": 40,
+      "Armor": 0,
+      "Hp": 100
+    },
+    {
+      "name": "Агат",
+      "Price": 3,
+      "Icon": "Images/Items/PinkAgate.png",
+      "Damage": 5,
+      "Armor": 0,
+      "Hp": 30
+    },
+    {
+      "name": "Подвеска нищего",
+      "Price": 3,
+      "Icon": "Images/Items/PoorNecklace.png",
+      "Damage": 0,
+      "Armor": 0,
+      "Hp": 50
+    },
+    {
+      "name": "Красивое кольцо",
+      "Price": 10,
+      "Icon": "Images/Items/PurpleRing.png",
+      "Damage": 0,
+      "Armor": 0,
+      "Hp": 150
+    },
+    {
+      "name": "Камень жара",
+      "Price": 3,
+      "Icon": "Images/Items/RedQuartz.png",
+      "Damage": 5,
+      "Armor": 0,
+      "Hp": 30
+    },
+    {
+      "name": "Кольцо с рубином",
+      "Price": 15,
+      "Icon": "Images/Items/RedRing.png",
+      "Damage": 0,
+      "Armor": 0,
+      "Hp": 200
+    },
+    {
+      "name": "Кинжал знати",
+      "Price": 10,
+      "Icon": "Images/Items/RichDragger.png",
+      "Damage": 50,
+      "Armor": 0,
+      "Hp": 0
+    },
+    {
+      "name": "Подвеска знати",
+      "Price": 15,
+      "Icon": "Images/Items/RichNecklace.png",
+      "Damage": 0,
+      "Armor": 0,
+      "Hp": 250
+    },
+    {
+      "name": "Рубин",
+      "Price": 5,
+      "Icon": "Images/Items/Ruby.png",
+      "Damage": 10,
+      "Armor": 0,
+      "Hp": 30
+    },
+    {
+      "name": "Тайный свиток",
+      "Price": 15,
+      "Icon": "Images/Items/Scroll.png",
+      "Damage": 15,
+      "Armor": 0,
+      "Hp": 50
+    },
+    {
+      "name": "Обычная руна",
+      "Price": 5,
+      "Icon": "Images/Items/SimpleRune.png",
+      "Damage": 0,
+      "Armor": 30,
+      "Hp": 0
+    },
+    {
+      "name": "Колечко",
+      "Price": 7,
+      "Icon": "Images/Items/VoidRing.png",
+      "Damage": 0,
+      "Armor": 0,
+      "Hp": 100
+    },
+    {
+      "name": "Молот работяги",
+      "Price": 40,
+      "Icon": "Images/Items/WorkerHammer.png",
+      "Damage": 80,
+      "Armor": 0,
+      "Hp": 0
+    }
+  ]
+}

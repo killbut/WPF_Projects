@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D45E5F47-A9CD-4F37-B5E3-95A9B50B2146}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GameRoyak</RootNamespace>
+    <AssemblyName>GameRoyak</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+      <HintPath>..\packages\System.Text.Encodings.Web.5.0.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+      <HintPath>..\packages\System.Text.Json.5.0.2\lib\net461\System.Text.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=2.0.0.0, Culture=neutral, PublicKeyToken=9e7cd3b544a090dc">
+      <HintPath>..\packages\WpfAnimatedGif.2.0.2\lib\net40\WpfAnimatedGif.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="bin\Debug\Settings.cs" />
+    <Compile Include="Enums\Directions.cs" />
+    <Compile Include="Enums\StateCell.cs" />
+    <Compile Include="Enums\StatesWindow.cs" />
+    <Compile Include="Logic\FieldProvider.cs" />
+    <Compile Include="Logic\MultiConverter.cs" />
+    <Compile Include="Logic\RelayCommand.cs" />
+    <Compile Include="Logic\StatePage.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\BattleModel.cs" />
+    <Compile Include="Models\CellField.cs" />
+    <Compile Include="Models\ChanceCell.cs" />
+    <Compile Include="Models\Enemy.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Settings.cs" />
+    <Compile Include="Pages\ChestRoom.xaml.cs">
+      <DependentUpon>ChestRoom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DeathScreen.xaml.cs">
+      <DependentUpon>DeathScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Fight.xaml.cs">
+      <DependentUpon>Fight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HealRoom.xaml.cs">
+      <DependentUpon>HealRoom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LevelField.xaml.cs">
+      <DependentUpon>LevelField.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Shop.xaml.cs">
+      <DependentUpon>Shop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ChestRoom.xaml" />
+    <Page Include="Pages\DeathScreen.xaml" />
+    <Page Include="Pages\Fight.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\HealRoom.xaml" />
+    <Page Include="Pages\LevelField.xaml" />
+    <Page Include="Pages\MainMenu.xaml" />
+    <Page Include="Pages\SettingsPage.xaml" />
+    <Page Include="Pages\Shop.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="bin\Debug\Boss.json" />
+    <None Include="Jsons\Boss.json" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Audio\Background.mp3" />
+    <Content Include="bin\Debug\Audio\Steps.mp3" />
+    <Content Include="bin\Debug\ChanceCell.json" />
+    <Content Include="bin\Debug\Enemy.json" />
+    <Content Include="bin\Debug\Images\background1.png" />
+    <Content Include="bin\Debug\Images\background2.png" />
+    <Content Include="bin\Debug\Images\cell1.png" />
+    <Content Include="bin\Debug\Images\cell10\cell10.png" />
+    <Content Include="bin\Debug\Images\cell1\cell1_0_0_0_1.png" />
+    <Content Include="bin\Debug\Images\cell1\cell1_0_0_1_0.png" />
+    <Content Include="bin\Debug\Images\cell1\cell1_0_0_1_1.png" />
+    <Content Include="bin\Debug\Images\cell1\cell1_0_1_0_0.png" />
+    <Content Include="bin\Debug\Images\cell1\cell1_0_1_0_1.png" />
+    <Content Include="bin\Debug\Images\cell1\cell1_0_1_1_0.png" />
+    <Content Include="bin\Debug\Images\cell1\cell1_0_1_1_1.png" />
+    <Content Include="bin\Debug\Images\cell1\cell1_1_0_0_0.png" />
+    <Content Include="bin\Debug\Images\cell1\cell1_1_0_0_1.png" />
+    <Content Include="bin\Debug\Images\cell1\cell1_1_0_1_0.png" />
+    <Content Include="bin\Debug\Images\cell1\cell1_1_0_1_1.png" />
+    <Content Include="bin\Debug\Images\cell1\cell1_1_1_0_0.png" />
+    <Content Include="bin\Debug\Images\cell1\cell1_1_1_0_1.png" />
+    <Content Include="bin\Debug\Images\cell1\cell1_1_1_1_0.png" />
+    <Content Include="bin\Debug\Images\cell1\cell1_1_1_1_1.png" />
+    <Content Include="bin\Debug\Images\cell2.png" />
+    <Content Include="bin\Debug\Images\cell2\cell2_0_0_0_1.png" />
+    <Content Include="bin\Debug\Images\cell2\cell2_0_0_1_0.png" />
+    <Content Include="bin\Debug\Images\cell2\cell2_0_0_1_1.png" />
+    <Content Include="bin\Debug\Images\cell2\cell2_0_1_0_0.png" />
+    <Content Include="bin\Debug\Images\cell2\cell2_0_1_0_1.png" />
+    <Content Include="bin\Debug\Images\cell2\cell2_0_1_1_0.png" />
+    <Content Include="bin\Debug\Images\cell2\cell2_0_1_1_1.png" />
+    <Content Include="bin\Debug\Images\cell2\cell2_1_0_0_0.png" />
+    <Content Include="bin\Debug\Images\cell2\cell2_1_0_0_1.png" />
+    <Content Include="bin\Debug\Images\cell2\cell2_1_0_1_0.png" />
+    <Content Include="bin\Debug\Images\cell2\cell2_1_0_1_1.png" />
+    <Content Include="bin\Debug\Images\cell2\cell2_1_1_0_0.png" />
+    <Content Include="bin\Debug\Images\cell2\cell2_1_1_0_1.png" />
+    <Content Include="bin\Debug\Images\cell2\cell2_1_1_1_0.png" />
+    <Content Include="bin\Debug\Images\cell2\cell2_1_1_1_1.png" />
+    <Content Include="bin\Debug\Images\cell3.png" />
+    <Content Include="bin\Debug\Images\cell3\cell3_0_0_0_1.png" />
+    <Content Include="bin\Debug\Images\cell3\cell3_0_0_1_0.png" />
+    <Content Include="bin\Debug\Images\cell3\cell3_0_0_1_1.png" />
+    <Content Include="bin\Debug\Images\cell3\cell3_0_1_0_0.png" />
+    <Content Include="bin\Debug\Images\cell3\cell3_0_1_0_1.png" />
+    <Content Include="bin\Debug\Images\cell3\cell3_0_1_1_0.png" />
+    <Content Include="bin\Debug\Images\cell3\cell3_0_1_1_1.png" />
+    <Content Include="bin\Debug\Images\cell3\cell3_1_0_0_0.png" />
+    <Content Include="bin\Debug\Images\cell3\cell3_1_0_0_1.png" />
+    <Content Include="bin\Debug\Images\cell3\cell3_1_0_1_0.png" />
+    <Content Include="bin\Debug\Images\cell3\cell3_1_0_1_1.png" />
+    <Content Include="bin\Debug\Images\cell3\cell3_1_1_0_0.png" />
+    <Content Include="bin\Debug\Images\cell3\cell3_1_1_0_1.png" />
+    <Content Include="bin\Debug\Images\cell3\cell3_1_1_1_0.png" />
+    <Content Include="bin\Debug\Images\cell3\cell3_1_1_1_1.png" />
+    <Content Include="bin\Debug\Images\cell4.png" />
+    <Content Include="bin\Debug\Images\cell4\cell4_0_0_0_1.png" />
+    <Content Include="bin\Debug\Images\cell4\cell4_0_0_1_0.png" />
+    <Content Include="bin\Debug\Images\cell4\cell4_0_0_1_1.png" />
+    <Content Include="bin\Debug\Images\cell4\cell4_0_1_0_0.png" />
+    <Content Include="bin\Debug\Images\cell4\cell4_0_1_0_1.png" />
+    <Content Include="bin\Debug\Images\cell4\cell4_0_1_1_0.png" />
+    <Content Include="bin\Debug\Images\cell4\cell4_0_1_1_1.png" />
+    <Content Include="bin\Debug\Images\cell4\cell4_1_0_0_0.png" />
+    <Content Include="bin\Debug\Images\cell4\cell4_1_0_0_1.png" />
+    <Content Include="bin\Debug\Images\cell4\cell4_1_0_1_0.png" />
+    <Content Include="bin\Debug\Images\cell4\cell4_1_0_1_1.png" />
+    <Content Include="bin\Debug\Images\cell4\cell4_1_1_0_0.png" />
+    <Content Include="bin\Debug\Images\cell4\cell4_1_1_0_1.png" />
+    <Content Include="bin\Debug\Images\cell4\cell4_1_1_1_0.png" />
+    <Content Include="bin\Debug\Images\cell4\cell4_1_1_1_1.png" />
+    <Content Include="bin\Debug\Images\cell5.png" />
+    <Content Include="bin\Debug\Images\cell5\cell5_0_0_0_1.png" />
+    <Content Include="bin\Debug\Images\cell5\cell5_0_0_1_0.png" />
+    <Content Include="bin\Debug\Images\cell5\cell5_0_0_1_1.png" />
+    <Content Include="bin\Debug\Images\cell5\cell5_0_1_0_0.png" />
+    <Content Include="bin\Debug\Images\cell5\cell5_0_1_0_1.png" />
+    <Content Include="bin\Debug\Images\cell5\cell5_0_1_1_0.png" />
+    <Content Include="bin\Debug\Images\cell5\cell5_0_1_1_1.png" />
+    <Content Include="bin\Debug\Images\cell5\cell5_1_0_0_0.png" />
+    <Content Include="bin\Debug\Images\cell5\cell5_1_0_0_1.png" />
+    <Content Include="bin\Debug\Images\cell5\cell5_1_0_1_0.png" />
+    <Content Include="bin\Debug\Images\cell5\cell5_1_0_1_1.png" />
+    <Content Include="bin\Debug\Images\cell5\cell5_1_1_0_0.png" />
+    <Content Include="bin\Debug\Images\cell5\cell5_1_1_0_1.png" />
+    <Content Include="bin\Debug\Images\cell5\cell5_1_1_1_0.png" />
+    <Content Include="bin\Debug\Images\cell5\cell5_1_1_1_1.png" />
+    <Content Include="bin\Debug\Images\cell6.png" />
+    <Content Include="bin\Debug\Images\cell6\cell6_0_0_0_1.png" />
+    <Content Include="bin\Debug\Images\cell6\cell6_0_0_1_0.png" />
+    <Content Include="bin\Debug\Images\cell6\cell6_0_0_1_1.png" />
+    <Content Include="bin\Debug\Images\cell6\cell6_0_1_0_0.png" />
+    <Content Include="bin\Debug\Images\cell6\cell6_0_1_0_1.png" />
+    <Content Include="bin\Debug\Images\cell6\cell6_0_1_1_0.png" />
+    <Content Include="bin\Debug\Images\cell6\cell6_0_1_1_1.png" />
+    <Content Include="bin\Debug\Images\cell6\cell6_1_0_0_0.png" />
+    <Content Include="bin\Debug\Images\cell6\cell6_1_0_0_1.png" />
+    <Content Include="bin\Debug\Images\cell6\cell6_1_0_1_0.png" />
+    <Content Include="bin\Debug\Images\cell6\cell6_1_0_1_1.png" />
+    <Content Include="bin\Debug\Images\cell6\cell6_1_1_0_0.png" />
+    <Content Include="bin\Debug\Images\cell6\cell6_1_1_0_1.png" />
+    <Content Include="bin\Debug\Images\cell6\cell6_1_1_1_0.png" />
+    <Content Include="bin\Debug\Images\cell6\cell6_1_1_1_1.png" />
+    <Content Include="bin\Debug\Images\Enemies\Orc.png" />
+    <Content Include="bin\Debug\Images\Enemies\Rat.png" />
+    <Content Include="bin\Debug\Images\Enemies\ScorpionOrange.png" />
+    <Content Include="bin\Debug\Images\Enemies\ScorpionPink.png" />
+    <Content Include="bin\Debug\Images\Enemies\ScorpionYellow.png" />
+    <Content Include="bin\Debug\Images\Enemies\SlimeBlue.png" />
+    <Content Include="bin\Debug\Images\Enemies\SlimeGreen.png" />
+    <Content Include="bin\Debug\Images\Enemies\SlimePink.png" />
+    <Content Include="bin\Debug\Images\Enemies\SnakePink.png" />
+    <Content Include="bin\Debug\Images\Enemies\SnakeViolet.png" />
+    <Content Include="bin\Debug\Images\enemy1.png" />
+    <Content Include="bin\Debug\Images\enemy2.png" />
+    <Content Include="bin\Debug\Images\enemy3.png" />
+    <Content Include="bin\Debug\Images\enemyIcon.png" />
+    <Content Include="bin\Debug\Images\Items\Item1.png" />
+    <Content Include="bin\Debug\Images\Items\Item2.png" />
+    <Content Include="bin\Debug\Images\Items\Item3.png" />
+    <Content Include="bin\Debug\Images\Items\Item4.png" />
+    <Content Include="bin\Debug\Images\pepe.gif" />
+    <Content Include="bin\Debug\Images\pepeEnemy.gif" />
+    <Content Include="bin\Debug\Images\playerIcon.png" />
+    <Content Include="bin\Debug\Images\PlayersImage\banana.gif" />
+    <Content Include="bin\Debug\Images\PlayersImage\pepe.gif" />
+    <Content Include="bin\Debug\Images\Settings.json" />
+    <Content Include="bin\Debug\Images\smoke.jpg" />
+    <Content Include="bin\Debug\Images\start.png" />
+    <Content Include="bin\Debug\Player.json" />
+    <Content Include="bin\Debug\PlayerClasses.json" />
+    <Content Include="bin\Debug\Setting.json" />
+    <Content Include="bin\Debug\Settings.json" />
+    <Content Include="bin\Debug\Items.json" />
+    <Content Include="Jsons\ChanceCell.json" />
+    <Content Include="Jsons\Enemy.json" />
+    <Content Include="Jsons\PlayerClasses.json" />
+    <Content Include="Jsons\Settings.json" />
+    <Content Include="Jsons\Items.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

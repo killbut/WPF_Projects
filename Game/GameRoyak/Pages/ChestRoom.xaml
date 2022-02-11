@@ -1,0 +1,42 @@
+﻿<Page x:Class="GameRoyak.Pages.ChestRoom"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:GameRoyak"
+      mc:Ignorable="d"
+      Title="ChestRoom">
+    <Border CornerRadius="3" BorderThickness="5" BorderBrush="#FF0F0F15">
+        <Grid Background="#FF405353" Width="Auto" Height="Auto">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>    
+            <TextBlock Grid.Column="1" Grid.Row="0" Text="Сундук" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontFamily="Comic Sans MS" >
+            
+        </TextBlock>
+            <Border Grid.Column="1" Grid.Row="1" CornerRadius="12" BorderThickness="5" BorderBrush="#FF0F0F15" Margin="10">
+            <Button Name="ItemButton" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+                <Grid Name="Item">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height ="4*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                </Grid>
+            </Button>
+        </Border>
+            <Border Grid.Column="1" Grid.Row="2" CornerRadius="12" BorderThickness="5" BorderBrush="#FF0F0F15" Margin="10">
+            <Button Name="Exit" Content="Не брать" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="18"/>
+        </Border>
+        </Grid>
+    </Border>
+</Page>

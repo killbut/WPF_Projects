@@ -1,0 +1,16 @@
+﻿{
+  "SpeedAnimation": 1000,
+  "Volume": 0.2,
+  "PlayerWidth": 50,
+  "PlayerHeight": 50,
+  "TorchWidth": 100,
+  "TorchHeight": 100,
+  "TorchOpacity": 0.4,
+  "TorchEffectRadius": 70,
+  "OpacityDarkRoom": 0.3,
+  "NumRoomShop": 2,
+  "NumRoomChest": 5,
+  "NumRoomHeal": 4,
+  "NumRoomFight": 1,
+  "NumRoomBoss": 10
+}

@@ -1,0 +1,306 @@
+﻿<Page x:Class="GameRoyak.Pages.Fight"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GameRoyak.Models"
+      xmlns:converter="clr-namespace:GameRoyak.Logic"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="View" ShowsNavigationUI="False" Loaded="Fight_OnLoaded" >
+
+
+    <Page.DataContext>
+        <local:BattleModel></local:BattleModel>
+        
+    </Page.DataContext>
+    <Page.Resources>
+
+        <converter:MultiConverter x:Key="MultiConverter"/>
+
+
+        <Style x:Key="MyFocusVisualStyle">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate >
+                        <Rectangle Margin="-2" StrokeThickness="2" RadiusX="2" RadiusY="2" >
+                            <Rectangle.Stroke>
+                                <SolidColorBrush Color="CornflowerBlue" x:Name="RectangleStroke" />
+                            </Rectangle.Stroke>
+                            <!--<Rectangle.Triggers>
+                                <EventTrigger RoutedEvent="Rectangle.Loaded" >
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation From="Red"
+                                                        To="Orange"
+                                                        Duration="0:0:0.5" 
+                                                        RepeatBehavior="Forever" 
+                                                        Storyboard.TargetName="RectangleStroke"
+                                                        Storyboard.TargetProperty="Color"/>
+                                            <DoubleAnimation To="3" 
+                                                         Duration="0:0:0.5"
+                                                         RepeatBehavior="Forever"
+                                                         Storyboard.TargetProperty="StrokeDashOffset" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </Rectangle.Triggers>-->
+                        </Rectangle>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource MyFocusVisualStyle}" />
+            <Setter Property="Focusable" Value="True"/>
+        </Style>
+
+        <Style x:Key="HUD" TargetType="Button" >
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border BorderBrush="#FF757575" Margin="0,0,0,0" BorderThickness="4,4,4,4" >
+                                <Rectangle Fill="{TemplateBinding Background}"
+                                           Stroke="IndianRed"
+                                           x:Name="test" StrokeThickness="4" />
+                            </Border>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding Path=Name}" Width="100" Margin="0,0,30,0" VerticalAlignment="Center"  HorizontalAlignment="Center"/>
+                                <Grid Grid.Column="1">
+                                    <ProgressBar Value="{Binding  Path=CurrentHP}"
+                                                 Width="300" 
+                                                 Height="auto"
+                                                 Margin="17,18,16,14"/>
+                                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <TextBlock.Text>
+                                            <MultiBinding StringFormat="{}{0}/{1} ">
+                                                <Binding Path="CurrentHP"/>
+                                                <Binding Path="HP"/>
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                </Grid>
+                                <TextBlock Grid.Column="2" Text="{Binding Path=Damage}" Width="100" Margin="70,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                            </Grid>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Fill" TargetName="test">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFB8B8B8"/>
+                                            <GradientStop Color="#FF838383" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter Property="Fill" TargetName="test">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FFB8B8B8"/>
+                                            <GradientStop Color="#FF838383" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="PlayerInformation" TargetType="Button" >
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border BorderBrush="#FF757575" Margin="0,0,0,0" BorderThickness="4,4,4,4" >
+                                <Rectangle Fill="{TemplateBinding Background}"
+                                           Stroke="Green" StrokeThickness="1">
+                                </Rectangle>
+                            </Border>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding Path=Name}" Width="100" Margin="0,0,30,0" VerticalAlignment="Center"  HorizontalAlignment="Center"/>
+                                <Grid Grid.Column="1">
+                                    <ProgressBar Value="{Binding  Path=CurrentHP}" Width="100" Height="auto" Margin="17,18,16,14"  />
+                                    <TextBlock  VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <TextBlock.Text>
+                                            <MultiBinding StringFormat="{}{0}/{1} ">
+                                                <Binding Path="CurrentHP"/>
+                                                <Binding Path="HP"/>
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                </Grid>
+                                <TextBlock Grid.Column="2" Text="{Binding Path=Damage}" Width="100" Margin="70,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="test" TargetType="Button" >
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderBrush="#FF757575">
+                            <StackPanel >
+                                <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" />
+                                <Image Name="ImageInStyle" />
+                                <Grid>
+                                    <ProgressBar Value="{Binding  CurrentHP}" Width="auto" Height="auto"/>
+                                    <TextBlock  VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <TextBlock.Text>
+                                            <MultiBinding StringFormat="{}{0}/{1} ">
+                                                <Binding Path="CurrentHP"/>
+                                                <Binding Path="HP"/>
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                </Grid>
+                                <Grid>
+                                    <ProgressBar Value="{Binding Path=Armor,FallbackValue=0}" Maximum="{Binding arm}" Foreground="#FF0037F3" Height="10"></ProgressBar>
+                                    <TextBlock Text="{Binding Path=Armor}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Grid>
+                                
+                                <!--<Border BorderBrush="Cyan" BorderThickness="1,1,1,1" >
+                                    <TextBlock Text="{Binding Path=Armor}"></TextBlock>
+                                </Border>-->
+                            </StackPanel>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            
+        </Style>
+    </Page.Resources>
+
+    <Page.InputBindings>
+        <KeyBinding 
+            Key="Escape"
+            Command="{Binding ReturnPreviousPanelCommand}">
+            <KeyBinding.CommandParameter>
+                <MultiBinding Converter="{StaticResource MultiConverter}">
+                    <Binding ElementName="PanelGrid"/>
+                    <Binding ElementName="EnemiesGrid"/>
+                </MultiBinding>
+            </KeyBinding.CommandParameter>
+        </KeyBinding>
+        <MouseBinding MouseAction="RightClick"
+                      Command="{Binding ReturnPreviousPanelCommand}">
+            <MouseBinding.CommandParameter>
+                <MultiBinding Converter="{StaticResource MultiConverter}">
+                    <Binding ElementName="PanelGrid"/>
+                    <Binding ElementName="EnemiesGrid"/>
+                </MultiBinding>
+            </MouseBinding.CommandParameter>
+        </MouseBinding>
+    </Page.InputBindings>
+
+    <Grid x:Name="MainGrid" Background="White" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer VerticalAlignment="Center" HorizontalAlignment="Center" Panel.ZIndex="2">
+            <TextBlock x:Name="MessageTextBlock" Text="{Binding Message,Mode=TwoWay,Delay=50,FallbackValue=hui}"></TextBlock>
+        </ScrollViewer>
+        
+        <Grid x:Name="PanelGrid" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel x:Name="FirstPanel">
+                <Button Content="Сражаться" Height="50" Width="auto" x:Name="firstButton"
+                        Command="{Binding ShowSecondPanelCommand}"
+                        CommandParameter="{Binding ElementName=PanelGrid}"/>
+
+                <Button Content="Сбежать" Height="50" Width="auto"
+                        x:Name="SecondButtonInFirstPanel"
+                        Command="{Binding EscapeFromBattleCommand}"
+                        CommandParameter="{Binding ElementName=SecondButtonInFirstPanel}"/>
+            </StackPanel>
+
+            <StackPanel x:Name="SecondPanel" Visibility="Hidden">
+                <Button Content="Атаковать"
+                        Command="{Binding AttackCommand}"
+                        Height="50">
+                    <Button.CommandParameter>
+                        <MultiBinding Converter="{StaticResource MultiConverter}">
+                            <Binding ElementName="SecondPanel"/>
+                            <Binding ElementName="EnemiesGrid"/>
+                            <Binding Source="Common"></Binding>
+                        </MultiBinding>
+                    </Button.CommandParameter>
+                </Button>
+
+                <Button Content="Специальная Атака"
+                        Command="{Binding ShowThirdPanelCommand}"
+                        CommandParameter="{Binding ElementName=PanelGrid}"
+                        Height="50">
+                </Button>
+            </StackPanel>
+            <StackPanel x:Name="ThirdPanel" ZIndex="0" Visibility="Hidden">
+                <Button Content="Оглушить"
+                        Height="50"
+                        Command="{Binding AttackCommand}"
+                        x:Name="StunButton"
+                        >
+                    <Button.CommandParameter>
+                        <MultiBinding Converter="{StaticResource MultiConverter}">
+                            <Binding ElementName="SecondPanel"/>
+                            <Binding ElementName="EnemiesGrid"/>
+                            <Binding Source="Stun"/>
+                            <Binding ElementName="StunButton"></Binding>
+                        </MultiBinding>
+                    </Button.CommandParameter>
+                </Button>
+                <Button Content="Заморозить"
+                        Height="50"
+                        Command="{Binding AttackCommand}"
+                        x:Name="FreezeButton">
+                    <Button.CommandParameter>
+                        <MultiBinding Converter="{StaticResource MultiConverter}">
+                            <Binding ElementName="SecondPanel"/>
+                            <Binding ElementName="EnemiesGrid"/>
+                            <Binding Source="Freeze"/>
+                            <Binding ElementName="FreezeButton" ></Binding>
+                        </MultiBinding>
+                    </Button.CommandParameter>
+                </Button>
+            </StackPanel>
+
+            <Grid Grid.Column="1" x:Name="PlayerGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1"  x:Name="EnemiesGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                </Grid>
+            </Grid>
+        </Grid>
+
+    </Grid>
+
+</Page>
